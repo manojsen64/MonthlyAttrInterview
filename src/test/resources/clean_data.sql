@@ -1,0 +1,1 @@
+delete from MONTHLY_MASTER_BK_CHANGED_ATTR_INTERVIEW  where nvic in('33TST1','33TST2');
