@@ -26,8 +26,10 @@ public class MonthlyInterviewJobInvokerController {
 
 		return "Batch job has been invoked with status : " + lunchJob();
 	}
-
-	@Scheduled(cron ="0/60 * * * * ?")
+	
+    // 0/60 * * * * ?
+	// runs every 3 hours
+	@Scheduled(cron ="0 0 0/3 * * ?")
 	public String lunchJob() throws Exception {
 		JobParameters jobParameters = new JobParametersBuilder().addLong("time", System.currentTimeMillis())
 				.toJobParameters();
